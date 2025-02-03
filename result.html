@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel = "stylesheet" href="result.css">
+</head>
+<body>
+    <h1>Results Page</h1>
+    <div class="result"></div>
+
+    <script>
+        const results = document.querySelector('.result')
+        results.innerHTML = ""
+        const resultDiv = document.createElement("div");
+        const answers = JSON.parse(localStorage.getItem("answers"));
+        const questionList = JSON.parse(localStorage.getItem("questions"));
+
+        questionList.forEach((question, index) => {
+            const questionResult = document.createElement("div");
+            questionResult.classList.add("results_list")
+            if (answers[index] === question.correct_solution){
+                questionResult.classList.add("correct")
+                questionResult.innerHTML = `
+                <h2>${questionList[index].question}</h2>
+                <h3>You are correct! You answered ${answers[index]} and the correct answer is ${questionList[index].correct_solution}</h3>
+            `
+            }else{
+                questionResult.classList.add("wrong")
+                questionResult.innerHTML = `
+                <h2>${questionList[index].question}</h2>
+                <h3>You are wrong! You answered ${answers[index]} and the correct answer is ${questionList[index].correct_solution}</h3>
+            ` 
+            }
+            resultDiv.appendChild(questionResult);
+        }) 
+        results.appendChild(resultDiv)
+    </script>
+    
+</body>
+</html>
