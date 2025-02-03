@@ -4,6 +4,7 @@ let answers = []
 let wrongQuestion = []
 let rightQuestions = []
 const questionList = []
+let answered = false
 
 async function getData() {
     
@@ -78,7 +79,16 @@ function renderQuestion(){
         const nextBtn = document.createElement("button");
         nextBtn.classList.add("nextBtn")
         nextBtn.textContent = "Next";
-        nextBtn.addEventListener("click", next);
+        nextBtn.addEventListener("click", () => {
+            if (!answers[questionNo]){
+                const alert = document.createElement('div')
+                alert.innerHTML = `<p>No answer selected. Select an answer!</p>`
+                container.appendChild(alert)
+            }else {
+                next()
+            }
+            }
+            );
         container.appendChild(nextBtn);
     } else {
         // Submit button (Only appears on last question)
@@ -92,7 +102,9 @@ function renderQuestion(){
         
     }
 }
+
 function handleAnswer(e){
+    answered = true
     document.querySelectorAll(".answer-btn").forEach(btn => {
         btn.style.backgroundColor = "";  // Unhighlight all buttons
     });
@@ -120,3 +132,4 @@ function renderResult(){
 }
 
 document.addEventListener("DOMContentLoaded", renderData);
+
