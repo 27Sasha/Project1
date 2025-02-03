@@ -1,0 +1,31 @@
+.container{
+    text-align: center;
+    padding: 30px;
+}
+
+.answer-btn{
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.prevBtn, .nextBtn{
+    margin: 30px;
+    padding: 15px 50px;
+    border-radius: 20px;
+    background-color: lightblue;
+
+}
+
+h2{
+    margin: 20px;
+    border: 5px solid black;
+    padding: 30px;
+}
+
+.submitBtn{
+    margin: 30px;
+    padding: 15px 80px;
+    border-radius: 20px;
+    background-color: lightgreen;
+}
