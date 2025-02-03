@@ -1,0 +1,16 @@
+.results_list{
+    border: 5px solid black;
+    padding: 25px;
+    margin: 50px 25%;
+    border-radius: 20px;
+}
+h1{
+    text-align: center;
+    padding-top: 50px;
+}
+.correct{
+    background-color: lightgreen !important;
+}
+.wrong{
+    background-color: lightcoral !important;
+}
