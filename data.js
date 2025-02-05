@@ -8,7 +8,7 @@ let answered = false
 
 async function getData() {
     
-    const url = "https://opentdb.com/api.php?amount=10";
+    const url = "quizQs.json";
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -16,7 +16,7 @@ async function getData() {
       }
   
       const json = await response.json();
-      return json.results
+      return json
     } catch (error) {
       console.error(error.message);
     }}
@@ -62,6 +62,10 @@ function renderQuestion(){
         btn.textContent = sol;
 
         btn.addEventListener("click", handleAnswer)
+
+        if (answers[questionNo] == sol){
+            btn.style.background = "lightpink"
+        }
         optionsDiv.appendChild(btn);
         container.appendChild(optionsDiv)
     });
@@ -132,4 +136,6 @@ function renderResult(){
 }
 
 document.addEventListener("DOMContentLoaded", renderData);
+
+
 
