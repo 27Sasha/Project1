@@ -1,0 +1,52 @@
+[
+    {
+        "question": "Who has won the most total Academy Awards?",
+        "correct_answer": "Walt Disney",
+        "incorrect_answers": ["Drake", "Taylor Swift", "BlackPink"]
+    },
+    {
+        "question": "What artist has the most streams on Spotify?",
+        "correct_answer": "Drake",
+        "incorrect_answers": ["Ed Sheeran", "Taylor Swift", "BlackPink"]
+    },
+    {
+        "question": "What company was originally called 'Cadabra?'",
+        "correct_answer": "Amazon",
+        "incorrect_answers": ["Shein", "Libebe", "Avanti"]
+    },
+    {
+        "question": "How many ghosts chase Pac-Man at the start of each game?",
+        "correct_answer": "4",
+        "incorrect_answers": ["1", "0", "9"]
+    },
+    {
+        "question": "What shoe brand makes the 'Mexico 66'? ",
+        "correct_answer": "Onitsuka Tiger",
+        "incorrect_answers": ["Asic", "Nike", "Adidas"]
+    },
+    {
+        "question": "Is Blackpink from Korea?",
+        "correct_answer": "Yes",
+        "incorrect_answers": ["No"]
+    },
+    {
+        "question": "Blackpink is the most popular group in Korea ",
+        "correct_answer": "True",
+        "incorrect_answers": ["False"]
+    },
+    {
+        "question": "T Swift is the most popular artist",
+        "correct_answer": "True",
+        "incorrect_answers": ["False"]
+    },
+    {
+        "question": "J Bieber is married to Selena Gomez",
+        "correct_answer": "False",
+        "incorrect_answers": ["True"]
+    },
+    {
+        "question": "Troy Bolten and Gabriella Montez are the two main characters in what 2006 Disney movie?",
+        "correct_answer": "High School Musical",
+        "incorrect_answers": ["Cindrella", "Snow White", "Mulan"]
+    }
+]
